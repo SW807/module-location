@@ -7,19 +7,12 @@ import android.os.IBinder;
 
 public class LocationService extends Service {
     private LocationSensorListener listener;
-    private long updateTimeInterval, updateDistanceChange;
     private boolean isRunning = false;
-
-    public LocationService(long updateTimeInterval, long updateDistanceChange)
-    {
-        this.updateTimeInterval = updateTimeInterval;
-        this.updateDistanceChange = updateDistanceChange;
-    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (!isRunning) {
-            listener = new LocationSensorListener(this, updateTimeInterval, updateDistanceChange);
+            listener = new LocationSensorListener(this, intent.getLongExtra("updateTimeInterval", 0), intent.getFloatExtra("updateDistanceChange", 0));
             isRunning = true;
         }
         return START_STICKY;

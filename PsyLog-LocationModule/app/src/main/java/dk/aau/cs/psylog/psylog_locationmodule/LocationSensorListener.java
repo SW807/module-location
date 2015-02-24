@@ -10,18 +10,18 @@ public class LocationSensorListener implements android.location.LocationListener
     private LocationManager manager;
 
 
-    public LocationSensorListener(Context context, long updateTimeInterval, long updateDistanceChange)
+    public LocationSensorListener(Context context, long updateTimeInterval, float updateDistanceChange)
     {
         manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 
         // http://developer.android.com/guide/topics/location/strategies.html
-        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, updateTimeInterval, updateDistanceChange, this);
+        manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, updateTimeInterval, updateDistanceChange, this);
     }
 
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            Log.i("Location: ", location.toString());
+            Log.i("location", location.toString());
         }
     }
 
