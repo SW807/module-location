@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         applicationId "dk.aau.cs.psylog.psylog_locationmodule"
         minSdkVersion 18
-        targetSdkVersion 19
+        targetSdkVersion 18
         versionCode 1
         versionName "1.0"
     }
@@ -20,5 +20,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 }

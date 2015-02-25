@@ -7,15 +7,17 @@ import android.os.IBinder;
 
 public class LocationService extends Service {
     private LocationSensorListener listener;
-    private boolean isRunning = false;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (!isRunning) {
-            listener = new LocationSensorListener(this, intent.getLongExtra("updateTimeInterval", 0), intent.getFloatExtra("updateDistanceChange", 0));
-            isRunning = true;
-        }
+        listener.startSensor();
+
         return START_STICKY;
+    }
+
+    @Override
+    public void onCreate(){
+        listener = new LocationSensorListener(this,1337,9001);
     }
 
     @Override
