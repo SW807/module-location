@@ -5,8 +5,9 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import dk.aau.cs.psylog.module_lib.ISensor;
 
-public class LocationSensorListener implements android.location.LocationListener {
+public class LocationSensorListener implements android.location.LocationListener, ISensor {
     private LocationManager manager;
 
     private long updateTimeInterval;
