@@ -1,6 +1,7 @@
 package dk.aau.cs.psylog.psylog_locationmodule;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -35,6 +36,12 @@ public class LocationSensorListener implements android.location.LocationListener
     public void stopSensor()
     {
         manager.removeUpdates(this);
+    }
+
+    public void sensorParameters(Intent intent)
+    {
+        updateDistanceChange = intent.getIntExtra("updateDistanceChange",0);
+        updateTimeInterval =intent.getIntExtra("updateTimeInterval",0);
     }
 
     @Override
