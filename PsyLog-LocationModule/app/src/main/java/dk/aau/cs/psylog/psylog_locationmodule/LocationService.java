@@ -9,7 +9,7 @@ import dk.aau.cs.psylog.module_lib.SuperService;
 
 public class LocationService extends SuperService {
     @Override
-    public void onCreate(){
+    public void setSensor() {
         sensor = new LocationSensorListener(this,1337,9001);
     }
 }
