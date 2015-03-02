@@ -12,6 +12,7 @@
         <service
             android:name=".LocationService"
             android:enabled="true"
+            android:process=":my_process"
             android:exported="true" >
         </service>
 
