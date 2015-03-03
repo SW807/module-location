@@ -7,7 +7,7 @@ import android.os.IBinder;
 import dk.aau.cs.psylog.module_lib.SuperService;
 
 
-public class LocationService extends SuperService {
+public class Service extends SuperService {
     @Override
     public void setSensor() {
         sensor = new LocationSensorListener(this,1000,0);
