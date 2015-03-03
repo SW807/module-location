@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), Service.class);
+                Intent i = new Intent(v.getContext(), PsyLogService.class);
                 i.putExtra("updateTimeInterval", 2);
                 i.putExtra("updateDistanceChange", 2);
                 startService(i);
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         final Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), Service.class);
+                Intent i = new Intent(v.getContext(), PsyLogService.class);
                 i.putExtra("updateTimeInterval", 1);
                 i.putExtra("updateDistanceChange", 1);
                 startService(i);
