@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dk.aau.cs.psylog.psylog_locationmodule" >
-
+    <uses-permission android:name="dk.aau.cs.psylog.psylog.READ_DB"/>
+    <uses-permission android:name="dk.aau.cs.psylog.psylog.WRITE_DB"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <uses-feature android:name="android.hardware.location" android:required="true" />
     </application>
 
 </manifest>
