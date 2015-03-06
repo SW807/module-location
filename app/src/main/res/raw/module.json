@@ -1,0 +1,17 @@
+{
+	"name": "location",
+	"_version": 1.0,
+	"tables": [
+		{
+			"name": "location",
+			"columns": [
+				{ "name": "source", "dataType": "TEXT"},
+				{ "name": "latitude", "dataType": "REAL", "_unit": "degrees" },
+				{ "name": "longitude", "dataType": "REAL", "_unit": "degrees" },
+				{ "name": "accuracy", "dataType": "REAL", "_unit": "meters" },
+				{ "name": "altitude", "dataType": "REAL", "nullable": true, "_unit": "meters above the WGS 84 reference ellipsoid" },
+				{ "name": "speed", "dataType": "REAL", "nullable": true, "_unit": "meters/second" }
+			]
+		}
+	]
+}
