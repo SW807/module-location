@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_locationmodule;
+package dk.aau.cs.psylog.location;
 
 import android.content.Context;
 import android.content.Intent;

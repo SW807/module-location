@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_locationmodule;
+package dk.aau.cs.psylog.location;
 
 import dk.aau.cs.psylog.module_lib.SuperService;
 
