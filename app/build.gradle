@@ -5,7 +5,7 @@ android {
     buildToolsVersion '21.1.2'
 
     defaultConfig {
-        applicationId "dk.aau.cs.psylog.psylog_locationmodule"
+        applicationId "dk.aau.cs.psylog.location"
         minSdkVersion 18
         targetSdkVersion 18
         versionCode 1
