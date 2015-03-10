@@ -16,15 +16,6 @@
             android:exported="true" >
         </service>
 
-        <activity
-            android:name="dk.aau.cs.psylog.location.MainActivity"
-            android:label="@string/title_activity_main" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <uses-feature android:name="android.hardware.location" android:required="true" />
     </application>
 
