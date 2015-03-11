@@ -1,9 +1,12 @@
 package dk.aau.cs.psylog.location;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import dk.aau.cs.psylog.module_lib.ISensor;
@@ -13,23 +16,31 @@ public class LocationSensorListener implements android.location.LocationListener
 
     private long updateTimeInterval;
     private float updateDistanceChange;
+
+    ContentResolver resolver;
+
     public LocationSensorListener(Context context, long updateTimeInterval, float updateDistanceChange)
     {
-        Log.i("location", "Location created with time: " + updateTimeInterval + " distance: "  +updateDistanceChange);
-
         manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         this.updateTimeInterval = updateTimeInterval;
         this.updateDistanceChange = updateDistanceChange;
         // http://developer.android.com/guide/topics/location/strategies.html
 
-
-
+        resolver = context.getContentResolver();
     }
 
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            Log.i("location", "time: " + updateTimeInterval + " distance: "  +updateDistanceChange + location.toString());
+            Uri uri = Uri.parse("content://dk.aau.cs.psylog.psylog" + "/location");
+            ContentValues values = new ContentValues();
+            values.put("source", location.getProvider());
+            values.put("latitude",location.getLatitude());
+            values.put("longitude", location.getLongitude());
+            values.put("accuracy", location.getAccuracy());
+            values.put("altitude", location.getAltitude());
+            values.put("speed", location.getSpeed());
+            resolver.insert(uri, values);
         }
     }
 
