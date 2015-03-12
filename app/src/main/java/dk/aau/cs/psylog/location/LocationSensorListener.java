@@ -32,7 +32,7 @@ public class LocationSensorListener implements android.location.LocationListener
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            Uri uri = Uri.parse("content://dk.aau.cs.psylog.psylog" + "/location");
+            Uri uri = Uri.parse(DBAccessContract.DBACCESS_CONTENTPROVIDER + "location");
             ContentValues values = new ContentValues();
             values.put("source", location.getProvider());
             values.put("latitude",location.getLatitude());
