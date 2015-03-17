@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.location;
+package dk.aau.cs.psylog.sensor.location;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

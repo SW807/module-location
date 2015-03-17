@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.location;
+package dk.aau.cs.psylog.sensor.location;
 
 import dk.aau.cs.psylog.module_lib.SensorService;
 
