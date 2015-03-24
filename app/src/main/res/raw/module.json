@@ -1,6 +1,7 @@
 {
 	"name": "location",
 	"_version": 1.0,
+    "_description":"Measures and stores location.",
 	"tables": [
 		{
 			"name": "location",
