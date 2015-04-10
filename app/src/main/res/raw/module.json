@@ -1,7 +1,7 @@
 {
 	"name": "location",
 	"_version": 1.0,
-    "_description":"Measures and stores location.",
+    "_description":"Måler og opbevarer placering.",
 	"tables": [
 		{
 			"name": "location",
