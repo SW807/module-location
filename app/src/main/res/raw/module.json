@@ -1,5 +1,6 @@
 {
 	"name": "location",
+    "_userfriendlyname": "Placerings sensor",
 	"_version": 1.0,
     "_description":"Måler og opbevarer placering.",
 	"tables": [
